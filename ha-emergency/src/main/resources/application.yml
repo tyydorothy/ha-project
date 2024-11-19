@@ -1,0 +1,23 @@
+server:
+  port: 8001
+
+api:
+  url:
+    domain: "www.ha.org.hk"
+    endpoint:
+      hospital: "/opendata/facility-hosp.json"
+      waitingtime: "/opendata/aed/aedwtdata-en.json"
+  geo:
+    url: "https://maps.googleapis.com/maps/api/geocode/json"
+    apikey: 
+
+spring:
+  datasource:
+    driverClassName: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/ha-service"
+    username: "postgres"
+    password: "admin1234"
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
