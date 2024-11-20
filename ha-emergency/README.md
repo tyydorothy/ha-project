@@ -6,7 +6,7 @@
 
 **Design**
 
-![ha-emeregncy](/ha-emergency.jpg)
+![ha-emeregncy](https://github.com/tyydorothy/ha-project/blob/main/ha-emergency/design.jpg)
 
 
 
