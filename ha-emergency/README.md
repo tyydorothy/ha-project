@@ -6,7 +6,7 @@
 
 **Design**
 
-![ha-emeregncy](/ha-emergency)
+![ha-emeregncy](/ha-emergency.jpg)
 
 
 
