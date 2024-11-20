@@ -22,7 +22,7 @@ public class AppConfig {
   }
 
   @Bean
-    RedisTemplate<String, String> redisTemplate(
+  RedisTemplate<String, String> redisTemplate(
       RedisConnectionFactory redisConnectionFactory) {
     RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
     redisTemplate.setConnectionFactory(redisConnectionFactory);
