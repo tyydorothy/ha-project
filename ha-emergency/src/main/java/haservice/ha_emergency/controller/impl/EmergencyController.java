@@ -14,7 +14,7 @@ public class EmergencyController implements EmergencyOperation {
   @Autowired
   private EmergencyInfoService emergencyInfoService;
 
-  public List<AEInfoResponseDto> getClosestAEInfo(@RequestParam String lat, @RequestParam String lon) throws JsonProcessingException {
-      return emergencyInfoService.getClosestAEInfo(lat, lon);
+  public List<AEInfoResponseDto> getNearestAEInfo(@RequestParam String lat, @RequestParam String lon) throws JsonProcessingException {
+      return emergencyInfoService.getNearestAEInfo(lat, lon);
   }
 }

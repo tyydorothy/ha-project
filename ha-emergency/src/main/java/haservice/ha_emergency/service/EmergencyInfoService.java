@@ -18,6 +18,6 @@ public interface EmergencyInfoService {
 
   AEWaitTimeUpdate getLatestAEInfoFromRedis() throws JsonProcessingException;
 
-  List<AEInfoResponseDto> getClosestAEInfo(String lat, String lon) throws JsonProcessingException;
+  List<AEInfoResponseDto> getNearestAEInfo(String lat, String lon) throws JsonProcessingException;
 
 }

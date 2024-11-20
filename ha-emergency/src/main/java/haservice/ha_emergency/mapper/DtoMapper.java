@@ -7,7 +7,6 @@ import haservice.ha_emergency.entity.AEWaitTimeEntity;
 import haservice.ha_emergency.entity.HospitalEntity;
 import haservice.ha_emergency.model.AEWaitTimeUpdate;
 
-// Entity->DTO
 @Component
 public class DtoMapper {
   public AEInfoResponseDto map(HospitalEntity hospitalEntity, List<AEWaitTimeEntity> aeWaitTimeEntities){

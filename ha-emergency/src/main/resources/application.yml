@@ -7,9 +7,6 @@ api:
     endpoint:
       hospital: "/opendata/facility-hosp.json"
       waitingtime: "/opendata/aed/aedwtdata-en.json"
-  geo:
-    url: "https://maps.googleapis.com/maps/api/geocode/json"
-    apikey: 
 
 spring:
   datasource:

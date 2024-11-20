@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@EnableScheduling // required if there is scheduled tasks
+@EnableScheduling
 public class HaEmergencyApplication {
 
 	public static void main(String[] args) {

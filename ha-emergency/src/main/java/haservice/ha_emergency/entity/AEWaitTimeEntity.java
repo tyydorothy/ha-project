@@ -22,7 +22,7 @@ import lombok.ToString;
 
 @Builder
 @AllArgsConstructor 
-@NoArgsConstructor // required for JPA to create instances of the entity class, call methods, and access fields using Reflection
+@NoArgsConstructor 
 @Getter
 @Setter
 @ToString
@@ -33,7 +33,7 @@ public class AEWaitTimeEntity {
   private Long id;
   private String topWait;
 
-  @ManyToOne(fetch = FetchType.LAZY) // default FetchType in @ManyToOne is EAGER
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "hospital")
   private HospitalEntity hospital;
 

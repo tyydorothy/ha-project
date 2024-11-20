@@ -7,8 +7,6 @@ import haservice.ha_emergency.service.HospitalService;
 import haservice.ha_emergency.service.EmergencyInfoService;
 
 @Component
-// CommandLineRunner
-// Run at the beginning of server start
 public class AppRunner implements CommandLineRunner{
   
   @Autowired

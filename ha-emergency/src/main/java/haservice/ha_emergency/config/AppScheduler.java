@@ -16,6 +16,5 @@ public class AppScheduler {
     emergencyInfoService.saveWaitingTimeToDB();
     emergencyInfoService.saveWaitTimeToRedis();
   }
-  //@Scheduled (cron = sec min hr day mon yr) // search for cron expression
-  //scheduled tasks 
+
 }

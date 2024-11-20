@@ -4,9 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
-@Getter // required for JSON serialization by @ResponseBody in Controller
+@Getter 
 @Builder
-@AllArgsConstructor // required for Builder
+@AllArgsConstructor 
 public class AEInfoResponseDto {
   private String hospName;
   private String hospAddress;

@@ -72,8 +72,6 @@ public class EmergencyInfoServiceImpl implements EmergencyInfoService{
     String json = this.restTemplate.getForObject(this.urlManager.getUrl(endpoint), String.class);
     return objectMapper.readValue(json, AEWaitTimeUpdate.class);
 
-    // unable to directly get list of objects by RestTemplate
-    // original json is an object, with list of sub-class objects
   }
 
   @Override
@@ -84,7 +82,7 @@ public class EmergencyInfoServiceImpl implements EmergencyInfoService{
 
     List<AEWaitTime> aeWaitTime = this.getWaitingTime().getAeWaitingTime();
 
-    timestampRepository.save(aeWaitTimeUpdate); // need to save parent data before saving child one // ERROR: save the transient instance before flushing
+    timestampRepository.save(aeWaitTimeUpdate); 
     
     for (HospitalEntity hosp:hospitals){
 
@@ -127,7 +125,8 @@ public class EmergencyInfoServiceImpl implements EmergencyInfoService{
   }
 
   @Override
-  public List<AEInfoResponseDto> getClosestAEInfo(String lat, String lon) throws JsonProcessingException{
+  public List<AEInfoResponseDto> getNearestAEInfo(String lat, String lon) 
+                                                throws JsonProcessingException{
 
     try{
 
@@ -145,8 +144,10 @@ public class EmergencyInfoServiceImpl implements EmergencyInfoService{
       .collect(Collectors.toList());
 
     Map<HospitalEntity,Double> hospDistMap = hospitals.stream()
-      .collect(Collectors.toMap(hospEntity -> hospEntity,
-                                hospEntity -> geocoding.getLocDist(hospEntity.getLatitude(), hospEntity.getLongitude(), lat, lon)));
+      .collect(Collectors.toMap(hospEntity -> hospEntity
+                                ,hospEntity -> geocoding.getLocDist(
+                                  hospEntity.getLatitude()
+                                  , hospEntity.getLongitude(), lat, lon)));
     
     AEWaitTimeUpdate aeLatestInfoFromRedis = this.getLatestAEInfoFromRedis();
 

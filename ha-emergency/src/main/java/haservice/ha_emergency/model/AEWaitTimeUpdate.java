@@ -6,18 +6,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.ToString;
 
-// This class is designed for Serialization (JSON -> Java Object) ONLY.
-// So, only getter is required
 @Getter
 @ToString
 public class AEWaitTimeUpdate{
-  @JsonProperty(value = "waitTime") // specify object name if diff from original source
+  @JsonProperty(value = "waitTime")
   private List<AEWaitTime> aeWaitingTime = new ArrayList<>();
   private String updateTime;
 
   @Getter
   @ToString
-
   public static class AEWaitTime{
     private String hospName;
     private String topWait;

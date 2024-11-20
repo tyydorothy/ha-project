@@ -7,7 +7,6 @@ import haservice.ha_emergency.entity.TimestampEntity;
 import haservice.ha_emergency.model.Hospital;
 import haservice.ha_emergency.model.AEWaitTimeUpdate;
 
-// Model->Entity
 @Component
 public class EntityMapper {
   public HospitalEntity map(Hospital hospital){

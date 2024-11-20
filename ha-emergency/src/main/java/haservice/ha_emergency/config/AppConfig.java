@@ -14,13 +14,11 @@ public class AppConfig {
   @Bean
   RestTemplate restTemplate(){
     return new RestTemplate();
-    // handling http request/reponse
   }
 
   @Bean
   ObjectMapper objectMapper(){
     return new ObjectMapper();
-    // map string (json format) --> POJO (Plain Old Java Object)
   }
 
   @Bean
