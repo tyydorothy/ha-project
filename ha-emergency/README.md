@@ -6,6 +6,8 @@
 
 **Design**
 
+![ha-emeregncy](/ha-emergency)
+
 
 
 *Dataset* is provided by Hong Kong Hospital Authority.
